@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+body{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/*CABEÇALHO*/
+
+
+header{
+    width: 100%;
+    height: 6.5em;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    margin-left: 20px;
+    width: 300px;
+}
+header nav{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+header nav a{   
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
+}
+
+
+/*CABEÇALHO*/
+.home, 
+.about{
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.home{
+    flex-direction: column;
+}
+.home h1{
+    font-size: 45px;
+    font-weight: 300;
+    font-family: 'Noto Sans', sans-serif;
+    color: #f1f1f1;
+    text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.9);
+    margin-bottom: 4rem;
+}
+.home svg{
+    width: 70%;
+}
+
+/*ANIMAÇÃO*/
+
+.stroke{
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: anima 2s ease-in forwards;
+}
+
+@keyframes anima{
+   from{
+    stroke-dashoffset: 500px;
+   }to{
+    stroke-dashoffset: 0px;
+   }
+}
+
+/*ABOUT*/
+.about article{
+    font-size: 22px;
+    color: #f1f1f1;
+    font-weight: 100;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.about img{
+    width: 50%;
+}
+
+
+
+/*LANGUAGE*/
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: #f1f1f1;
+    font-weight: 100;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 2rem 0 .5rem 0;
+}
+
+.language{
+    width: 70%;
+    height: 30rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 80px;
+
+}
+.language svg{
+    opacity: .8;
+    width: 60px;
+    height: 55px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.language svg:hover{
+    opacity: 1;
+}
+
+
+
+
+
+/*CARDS*/
+.work{
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    overflow: hidden;
+}
+.card{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    width: 90%;
+    height: 60%;
+    transition: ease 1.5s;
+    
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+.card h3{
+    color: #f1f1f1;
+    font-size: 2.5rem;
+    margin: 1rem 0px;
+    font-weight: 300;
+    font-family: 'Noto Sans',sans-serif;
+}
+.card p,a{
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: 'Noto Sans',sans-serif;
+    text-decoration: none;
+}
+.card a{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.card a svg{
+    margin-right: 10px;
+}
+
+.direct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: 1s ease;
+}
+.direct svg{
+    margin: 0px 1rem;
+}
+.direct:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer svg{
+    margin: 0 50px;
+    opacity: .8;
+}
+footer svg:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*RESPONSIVIDADE*/  
+
+@media screen and (max-width: 850px) {
+    header{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+
+    }
+    header nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 1.5rem;
+    }
+    .home svg{
+        width: 90%;
+    }
+    .home h1{
+        font-size: 2rem;
+    }
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem;
+    }
+    .about img{
+        width: 70%;
+    }
+    .work{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+    }
+    .card{
+        margin: 1rem 0px;
+    }
+    .direct{
+        display: flex;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        text-align: center;
+    }
+    .direct svg{
+        display: none;
+    }
+}
